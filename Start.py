@@ -8,9 +8,10 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
 
     w = QWidget()
-    w.setWindowTitle('Inicial')
+    w.setWindowTitle('TechSup')
     w.move(QDesktopWidget().availableGeometry().center() - w.frameGeometry().center())
-    w.resize(500, 500)
+    w.showMaximized()
+        
     w.show()
 
     sys.exit(app.exec_())
