@@ -9,8 +9,7 @@ if __name__ == '__main__':
 
     w = QWidget()
     w.setWindowTitle('Inicial')
-
-    w.move(QDesktopWidget().availableGeometry().center() - w.frameGeometry().center())    
+    w.move(QDesktopWidget().availableGeometry().center() - w.frameGeometry().center())
     w.resize(500, 500)
     w.show()
 
