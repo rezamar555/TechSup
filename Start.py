@@ -11,7 +11,5 @@ if __name__ == '__main__':
     w.setWindowTitle('TechSup')
     w.move(QDesktopWidget().availableGeometry().center() - w.frameGeometry().center())
     w.showMaximized()
-        
     w.show()
-
     sys.exit(app.exec_())
