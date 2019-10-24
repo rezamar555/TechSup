@@ -50,7 +50,7 @@ class QPaletteButton(QtWidgets.QPushButton):
 
     def __init__(self, color):
         super().__init__()
-        self.setFixedSize(QtCore.QSize(24,24))
+        self.setFixedSize(QtCore.QSize(60,60))
         self.color = color
         self.setStyleSheet("background-color: %s;" % color)
 
