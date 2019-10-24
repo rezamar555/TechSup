@@ -1,15 +1,28 @@
 import sys
 
-from PyQt5.QtCore import QCoreApplication
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QDesktopWidget
+from PyQt5.QtCore import QCoreApplication, Qt
+from PyQt5.QtGui import QIcon, QPen, QBrush, QPainter
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QDesktopWidget, QMainWindow
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
+class Window(QMainWindow):
+    def __init__(self):
+        super().__init__()
 
-    w = QWidget()
-    w.setWindowTitle('TechSup')
-    w.move(QDesktopWidget().availableGeometry().center() - w.frameGeometry().center())
-    w.showMaximized()
-    w.show()
-    sys.exit(app.exec_())
+        self.title = "TechSup"
+        self.InitWindow()
+
+    def InitWindow(self):
+        self.setWindowTitle(self.title)
+        self.showMaximized()
+        self.show()
+
+    def paintEvent(self, e):
+        painter = QPainter(self)
+        painter.setPen(QPen(Qt.black, 5, Qt.SolidLine))
+        painter.setBrush(QBrush(Qt.black))
+
+        painter.drawRect(20,20,900,500)
+
+App = QApplication(sys.argv)
+window = Window()
+sys.exit(App.exec_())
