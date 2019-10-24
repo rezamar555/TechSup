@@ -20,7 +20,6 @@ class Window(QMainWindow):
         painter = QPainter(self)
         painter.setPen(QPen(Qt.black, 5, Qt.SolidLine))
         painter.setBrush(QBrush(Qt.black))
-
         painter.drawRect(20,20,900,500)
 
 App = QApplication(sys.argv)
