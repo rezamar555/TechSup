@@ -15,7 +15,7 @@ class Window(QMainWindow):
         self.setWindowTitle(self.title)
         self.showMaximized()
         self.show()
-
+        
     def paintEvent(self, e):
         painter = QPainter(self)
         painter.setPen(QPen(Qt.black, 5, Qt.SolidLine))
