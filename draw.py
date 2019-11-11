@@ -60,7 +60,6 @@ class MainWindow(QtWidgets.QMainWindow):
         super().__init__()
 
         self.canvas = Canvas()
-
         w = QtWidgets.QWidget()
         l = QtWidgets.QVBoxLayout()
         w.setLayout(l)
@@ -81,5 +80,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
 app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()
+window.showFullScreen()
 window.show()
 app.exec_()
